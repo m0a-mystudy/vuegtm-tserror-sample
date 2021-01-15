@@ -32,11 +32,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+  mounted(){
+    this.$gtm.trackView("MyScreenName", "currentpath");
+  }
 });
 </script>
 

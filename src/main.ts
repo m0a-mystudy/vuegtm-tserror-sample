@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
+import {createGtm} from 'vue-gtm'
+
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(createGtm({id:'dummy'}));
+app.mount('#app')
